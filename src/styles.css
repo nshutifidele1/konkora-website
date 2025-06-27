@@ -1,0 +1,40 @@
+@tailwind  base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for the file upload area */
+.upload-drop-zone {
+  @apply transition-all duration-300;
+}
+
+.upload-drop-zone.active {
+  @apply bg-indigo-50 border-indigo-500;
+}
+
+/* Custom toggle switch styles */
+input[type="checkbox"] + label {
+  @apply relative;
+}
+
+input[type="checkbox"] + label span {
+  @apply absolute left-0 transition-transform duration-200;
+}
+
+input[type="checkbox"]:checked + label span {
+  @apply transform translate-x-4;
+}
+
+input[type="checkbox"]:checked + label {
+  @apply bg-indigo-600;
+}
+
+/* Progress bar animation */
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.animate-progress {
+  animation: progress 2s ease-in-out;
+}
+  
